@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website </title>
+
+<style>
+	
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A9A9A9;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 1300px;
+            height: 90vh;
+            background-color: #003366;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #003366;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+	    color: white;
+        }
+
+        .search-container {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            background-color: #ADD8E6;
+        }
+
+        .search-container input {
+            width: 60%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            font-size: 1em;
+            background-color: #ADD8E6;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .categories div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #555;
+        }
+
+	.category-button {
+   	    text-decoration: none;        /* Remove underline */
+            color: white;                 /* Button text color */
+   	    background-color: #007bff;    /* Button background color */
+   	    padding: 10px 150px;           /* Button padding */
+   	    font-size: 1em;
+   	    border-radius: 5px;           /* Rounded corners */
+   	    transition: background-color 0.3s ease; /* Smooth background transition */
+	}
+	
+	.category-button:hover {
+    	   background-color: #0056b3;    /* Darker blue on hover */
+   	   color: white;                 /* Text color on hover */
+	}
+
+        .restaurant-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .restaurant-card {
+            display: flex;
+            padding: 20px;
+            margin-bottom: 15px;
+            background-color: #ADD8E6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .restaurant-info {
+            flex: 1;
+        }
+
+        .restaurant-info h3 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .details {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .details span {
+            margin-right: 15px;
+        }
+
+        .add-favorites {
+            padding: 8px 14px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-favorites:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div class="header"> D - Tour </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for places...">
+        </div>
+
+        <div class="categories">
+		 <button class="add-favorites">Add to favorites</button>
+
+    	</div>
+        
+        <div class="restaurant-list">
+            <div class="restaurant-card">
+                <img src="samal.jpeg" alt="Samal Island">
+                <div class="restaurant-info">
+                    <h3>Samal Island</h3>
+                    <div class="description">Samal Island, located in Davao del Norte, Philippines, is a popular tourist destination known for its pristine white-sand 		    beaches, crystal-clear waters, and lush tropical landscapes. It offers a variety of attractions including beach resorts, diving spots, caves, and 		    waterfalls, making it a perfect getaway for nature lovers, adventure enthusiasts, and those seeking relaxation by the sea. Some well-known spots 		    include the Pearl Farm Beach Resort, the Hagimit Falls, and the Monfort Bat Sanctuary. Samal Island is easily accessible from Davao City, making it 		    a convenient and beautiful escape.</div>
+                    <div class="details">
+                        <span>⭐ 4.5</span>
+                        <span>0.3 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="d1.jpeg" alt="Davao del sur Province">
+                <div class="restaurant-info">
+                    <h3>Davao del sur Province</h3>
+                    <div class="description">Davao del Sur, located in the southern part of Mindanao, Philippines, is a province known for its diverse natural 			    attractions and cultural heritage. It is home to stunning landscapes, including Mount Apo, the highest peak in the Philippines, which draws hikers 		    and nature enthusiasts. Other popular tourist spots include the vibrant Kahayag Falls, the picturesque Lake Sebu with its scenic views and 		 	    indigenous culture, and the scenic Malagos Garden Resort. Davao del Sur also offers opportunities for adventure activities like ziplining, eco-		    tours, and visits to local farms. Its rich biodiversity and mix of adventure and relaxation make it a must-visit destination for travelers.</div>
+                    <div class="details">
+                        <span>⭐ 4.0</span>
+                        <span>0.3 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="gs.jpeg" alt="General Santos">
+                <div class="restaurant-info">
+                    <h3>General Santos</h3>
+                    <div class="description">General Santos City, located in the southern part of Mindanao, Philippines, is known for its vibrant culture, rich 		    history, and beautiful natural attractions. It is famous for being the "Tuna Capital of the Philippines," with many visitors enjoying fresh seafood 		    and the chance to experience the annual Tuna Festival. Tourist spots include Sarangani Bay for its clear waters and diving spots, the picturesque 		    T'boli village, and the serene Kalaja River. Additionally, General Santos offers adventure activities like hiking, eco-tours, and exploring nearby 		    xbeaches and waterfalls, making it an exciting destination for both nature lovers and cultural enthusiasts.</div>
+                    <div class="details">
+                        <span>⭐ 4.2</span>
+                        <span>0.3 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

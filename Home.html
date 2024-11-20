@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website </title>
+
+<style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+	    background: url('1.jpg')no-repeat center center fixed;
+	    background-size: cover;
+	    background-attachment: fixed;
+        }
+
+	 /* Checkbox (hidden) for toggling sidebar */
+    #toggleSidebar {
+      display: none;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hide sidebar by default */
+      background: url('bg.jpeg');
+      overflow-x: hidden;
+      transition: left 0.5s;
+      padding-top: 60px; /* Space at the top */
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 25px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Sidebar link hover effect */
+    .sidebar a:hover {
+      background-color: #007bff;
+    }
+
+    /* Toggle Sidebar when checkbox is checked */
+    #toggleSidebar:checked ~ .sidebar {
+      left: 0; /* Slide sidebar into view */
+    }
+
+    /* Open button styling */
+    .open-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background: url('bg.jpeg');
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      position: fixed;
+      top: 15px;
+      left: 5px;
+      z-index: 1;
+    }
+
+    /* Hide open button when sidebar is open */
+    #toggleSidebar:checked ~ .open-btn {
+      display: none;
+    }
+
+    /* Close button styling within sidebar */
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 155px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: transparent;
+    }
+	h1 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 50px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+	
+	h2 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 20px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+
+	
+	 .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+      color: white;
+      
+    }
+	h1 {
+  font-size: 24px;
+}
+	
+	.container > div:first-child { /* Left column */
+  text-align: left;
+}
+
+.container > div:last-child { /* Right column */
+  text-align: right;
+}
+	
+
+.container > div:nth-child(3) img {
+  width: 80%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.container > div:nth-child(3) h1 {
+  font-size: 24px;
+
+.container > div:nth-child(3) p {
+  font-size: 24px;
+
+</style>
+</head>
+<body>
+	<input type="checkbox" id="toggleSidebar">
+
+<!-- Open button -->
+<label for="toggleSidebar" class="open-btn">&#9776; Menu</label>
+
+<!-- Sidebar with close button -->
+<div class="sidebar">
+  <label for="toggleSidebar" class="close-btn">&#9776; Menu</label>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="D-Tour.html">Explore</a>
+  <a href="Contact.html">Contact Us</a>
+</div>
+
+
+<div class="container">
+    <!-- Left Column -->
+    <div class="column"> 
+      <h1>"Promoting Sustainable Tourism"</h1><br><br>
+      <img src="bluu.png" alt="Left Image"><br><br><br><br>
+        <p>Bluu Solutions Maps in the Davao Region offers real-time navigation, offline access, and safety alerts, along with eco-friendly routes and local points of              	interest, making travel easy, efficient, and secure. </p>
+    </div>	
+	
+	
+
+	<div></div> <!-- Empty div for the center -->
+
+    <!-- Right Column -->
+    <div class="column">
+      <h1>"Unlocking Potential for Lesser-Known Tourist Spots"</h1>
+      <img src="logo2.jpeg" alt="Right Image">
+      <p>Bluu Solutions Maps in the Davao Region offers real-time navigation, offline access, and safety alerts, along with eco-friendly routes and local points of interest, making travel easy, efficient, and secure.</p>
+    </div>	
+</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

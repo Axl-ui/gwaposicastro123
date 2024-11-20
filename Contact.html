@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website </title>
+
+<style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+	    color: white;
+            justify-content: center;
+            align-items: center;
+	    background: url('2.jpg')no-repeat center center fixed;
+	    background-size: cover;
+	    background-attachment: fixed;
+        }
+
+	 /* Checkbox (hidden) for toggling sidebar */
+    #toggleSidebar {
+      display: none;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hide sidebar by default */
+      background: url('bg.jpeg');
+      overflow-x: hidden;
+      transition: left 0.5s;
+      padding-top: 60px; /* Space at the top */
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 25px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Sidebar link hover effect */
+    .sidebar a:hover {
+      background-color: #007bff;
+    }
+
+    /* Toggle Sidebar when checkbox is checked */
+    #toggleSidebar:checked ~ .sidebar {
+      left: 0; /* Slide sidebar into view */
+    }
+
+    /* Open button styling */
+    .open-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background: url('bg.jpeg');
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      position: fixed;
+      top: 15px;
+      left: 5px;
+      z-index: 1;
+    }
+
+    /* Hide open button when sidebar is open */
+    #toggleSidebar:checked ~ .open-btn {
+      display: none;
+    }
+
+    /* Close button styling within sidebar */
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 155px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+	h1 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 50px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+
+	h2 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 20px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+
+	.info-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: white;
+}
+
+	}
+    .contact-container {
+        text-align: center;
+        max-width: 800px;
+    }
+    .contact-container h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+	background-color: #2d4e6a;
+	background-size: cover;
+	background-attachment: fixed;
+	border-radius: 10px;
+    }
+    .contact-column {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+        padding: 20px;
+    }
+    .contact-column h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .contact-column p {
+        line-height: 1.5;
+    }
+    .contact-column i {
+        font-size: 2em;
+        color: white;
+        margin-bottom: 10px;
+    }
+	.A {
+            background-color: blue;
+            border: white;
+            color: white;
+            padding: 5px, 10px;
+	    border-radius: 5px;
+            font-size: 100%;
+            /* Corrected padding values */
+            cursor: pointer;
+        }
+
+	.B {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border: white;
+            color: white;
+            padding: 5px, 10px;
+	    border-radius: 5px;
+	    font-size: 100%;
+            /* Corrected padding values */
+            cursor: pointer;
+        }
+
+</style>
+</head>
+<body>
+	<input type="checkbox" id="toggleSidebar">
+
+<!-- Open button -->
+<label for="toggleSidebar" class="open-btn">&#9776; Menu</label>
+
+<!-- Sidebar with close button -->
+<div class="sidebar">
+  <label for="toggleSidebar" class="close-btn">&#9776; Menu</label>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="D-Tour.html">Explore</a>
+  <a href="Contact.html">Contact Us</a>
+</div>
+
+	<div class="contact-container">
+	<center>
+    <h2>Get in Touch</h2>
+	</center>
+    <div class="contact-info">
+        <div class="contact-column">
+            <h3>🏠 ADDRESS</h3>
+            <p>7341 Duterte Street<br>Barangay San Francisco<br>Panabo City</p>
+            <p>Purok Tagumpay<br>Barangay Gredu<br>Panabo City</p>
+            <p>Purok Gwapo<br>Barangay Ising<br>Carmen Municipalty</p>
+            <p>PLDT<br>Rose Pharmacy<br>Panabo City</p>
+        </div>
+        <div class="contact-column">
+            <h3>📞 CONTACTS</h3>
+            <p>09272935806<br><a href="https://www.facebook.com/kenji.garcia.988">
+        <button class="A"> Facebook </button> </a><a href="https://www.instagram.com/axlkenjiii/?hl=en"><br>
+        <button class="B"> Instagram </button> </a><br></p>
+
+            <p>09518144788<br><a href="https://www.facebook.com/profile.php?id=100085445139396">
+	<button class="A"> Facebook </button> </a><a href="https://www.instagram.com/andriexx12/"><br>
+        <button class="B"> Instagram </button> </a><br></p>
+
+            <p>09123456789<br><a href="https://www.facebook.com/profile.php?id=100072689824739">
+	<button class="A"> Facebook </button> </a><a href="https://www.instagram.com/johncloydmendoza/"><br>
+        <button class="B"> Instagram </button> </a><br></p>
+
+            <p>09987654321<br><a href="https://www.facebook.com/ryan.respecia.984">
+	<button class="A"> Facebook </button> </a><a href="https://www.instagram.com/bernardokath/"><br>
+        <button class="B"> Instagram </button> </a><br></p>
+        </div>
+        <div class="contact-column">
+            <h3>✉️ EMAIL</h3>
+            <p>Axl Kenji M. Garcia<br>akmg991@gmail.com<br><br></p>
+            <p>Andrian A. Ebdani <br>andrian123db@gmail.com<br><br></p>
+            <p>Jhon Carlo Castro<br>jcpogi@gmail.com<br><br></p>
+            <p>Ryan Respecia<br>princessyannie@gmail.com<br><br></p>
+        </div>
+    </div>
+</div>
+
+
+	
+
+</body>
+</html>
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

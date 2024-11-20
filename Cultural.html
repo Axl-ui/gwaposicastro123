@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website </title>
+
+<style>
+	
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 1400px;
+            height: 100vh;
+            background: url('2.jpg') no-repeat center center fixed;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0px;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            padding: 20px;
+            background: url('2.jpg') no-repeat center center fixed;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+	    color: white;
+        }
+
+        .search-container {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            background: url('bb.jpeg');
+        }
+
+        .search-container input {
+            width: 60%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            font-size: 1em;
+            background: url('bb.jpeg');
+            border-bottom: 1px solid #ddd;
+        }
+
+        .categories div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #555;
+        }
+
+	.category-button {
+   	    text-decoration: none;        /* Remove underline */
+            color: white;                 /* Button text color */
+   	    background-color: #007bff;    /* Button background color */
+   	    padding: 10px 70px;           /* Button padding */
+   	    font-size: 1em;
+   	    border-radius: 5px;           /* Rounded corners */
+   	    transition: background-color 0.3s ease; /* Smooth background transition */
+	}
+	
+	.category-button:hover {
+    	   background-color: #0056b3;    /* Darker blue on hover */
+   	   color: white;                 /* Text color on hover */
+	}
+
+        .restaurant-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .restaurant-card {
+            display: flex;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: url('bb.jpeg');
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .restaurant-info {
+            flex: 1;
+        }
+
+        .restaurant-info h3 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .details {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .details span {
+            margin-right: 15px;
+        }
+
+        .add-favorites {
+            padding: 8px 14px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-favorites:hover {
+            background-color: #0056b3;
+        }
+
+	/* Checkbox (hidden) for toggling sidebar */
+    #toggleSidebar {
+      display: none;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hide sidebar by default */
+      background: url('bg.jpeg');
+      overflow-x: hidden;
+      transition: left 0.5s;
+      padding-top: 60px; /* Space at the top */
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 25px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Sidebar link hover effect */
+    .sidebar a:hover {
+      background-color: #007bff;
+    }
+
+    /* Toggle Sidebar when checkbox is checked */
+    #toggleSidebar:checked ~ .sidebar {
+      left: 0; /* Slide sidebar into view */
+    }
+
+    /* Open button styling */
+    .open-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background: url('bg.jpeg');
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      position: fixed;
+      top: 15px;
+      left: 5px;
+      z-index: 1;
+    }
+
+    /* Hide open button when sidebar is open */
+    #toggleSidebar:checked ~ .open-btn {
+      display: none;
+    }
+
+    /* Close button styling within sidebar */
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 155px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+</style>
+
+</head>
+
+<body>
+	
+	<input type="checkbox" id="toggleSidebar">
+
+<!-- Open button -->
+<label for="toggleSidebar" class="open-btn">&#9776; Menu</label>
+
+<!-- Sidebar with close button -->
+<div class="sidebar">
+  <label for="toggleSidebar" class="close-btn">&#9776; Menu</label>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="D-Tour.html">Explore</a>
+  <a href="Contact.html">Contact Us</a>
+</div>
+
+    <div class="app-container">
+        <div class="header"> D - Tour </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for places...">
+        </div>
+
+        <div class="categories">
+    <a href="D-Tour.html" class="category-button">🏖️ Seaside</a>
+    <a href="Hiking.html" class="category-button">⛰️ Hiking</a>
+    <a href="Campsites.html" class="category-button">🏕️ Campsites</a>
+    <a href="Falls.html" class="category-button">🌊 Falls</a>
+    <a href="Cultural.html" class="category-button">🏛️ Cultural Heritage</a>
+	</div>
+        
+        <div class="restaurant-list">
+            <div class="restaurant-card">
+                <img src="m.jpeg" alt="Museo Dabawenyo">
+                <div class="restaurant-info">
+                    <h3>Museo Dabawenyo</h3>
+                    <div class="description">Museo Dabawenyo showcases the rich history and cultural heritage of Davao City and its people. It features exhibits on 		    indigenous tribes, local history, art, and artifacts, offering visitors a deep dive into the region’s cultural roots. </div>
+                    <div class="details">
+                        <span>⭐ 4.1</span>
+                        <span>0.3 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="k.jpeg" alt="Kadayawan Village">
+                <div class="restaurant-info">
+                    <h3>Kadayawan Village</h3>
+                    <div class="description">Kadayawan Village, located in Davao City, is a living museum celebrating the cultural heritage of the indigenous people of 		    Davao. The village features traditional houses, arts and crafts, and cultural performances, providing a hands-on experience of indigenous Filipino 		    traditions.</div>
+                    <div class="details">
+                        <span>⭐ 4.0</span>
+                        <span>0.2 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="b.jpeg" alt="Baracatan Village">
+                <div class="restaurant-info">
+                    <h3>Baracatan Village</h3>
+                    <div class="description">Baracatan Village, known for its Lumad culture, offers a glimpse into the lives and traditions of the indigenous tribes of 		    the Davao Region, particularly the Bagobo, Manobo, and Obo tribes. Visitors can experience traditional rituals, arts, and crafts.</div>
+                    <div class="details">
+                        <span>⭐ 4.0</span>
+                        <span>0.1 mi</span>
+                        <button class="add-favorites">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

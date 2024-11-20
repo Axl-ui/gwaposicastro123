@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website </title>
+
+<style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+	    color: white;
+            justify-content: center;
+            align-items: center;
+	    background: url('2.jpg')no-repeat center center fixed;
+	    background-size: cover;
+	    background-attachment: fixed;
+        }
+
+	 /* Checkbox (hidden) for toggling sidebar */
+    #toggleSidebar {
+      display: none;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hide sidebar by default */
+      background: url('bg.jpeg');
+      overflow-x: hidden;
+      transition: left 0.5s;
+      padding-top: 60px; /* Space at the top */
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 25px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Sidebar link hover effect */
+    .sidebar a:hover {
+      background-color: #007bff;
+    }
+
+    /* Toggle Sidebar when checkbox is checked */
+    #toggleSidebar:checked ~ .sidebar {
+      left: 0; /* Slide sidebar into view */
+    }
+
+    /* Open button styling */
+    .open-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background: url('bg.jpeg');
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      position: fixed;
+      top: 15px;
+      left: 5px;
+      z-index: 1;
+    }
+
+    /* Hide open button when sidebar is open */
+    #toggleSidebar:checked ~ .open-btn {
+      display: none;
+    }
+
+    /* Close button styling within sidebar */
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 155px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+	h1 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 50px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+
+	h2 {
+	   font-family: 'Montserrat', sans-serif;
+	   font-size: 20px;
+	   color: white;
+	   text-shadow: 
+                -1px -1px 0px black,  
+                 1px -1px 0px black,  
+                -1px  1px 0px black,  
+                 1px  1px 0px black;
+	}
+
+	.info-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+</style>
+</head>
+<body>
+	<input type="checkbox" id="toggleSidebar">
+
+<!-- Open button -->
+<label for="toggleSidebar" class="open-btn">&#9776; Menu</label>
+
+<!-- Sidebar with close button -->
+<div class="sidebar">
+  <label for="toggleSidebar" class="close-btn">&#9776; Menu</label>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="D-Tour.html">Explore</a>
+  <a href="Contact.html">Contact Us</a>
+</div>
+
+
+<center>
+
+	
+	<h1> Our Story </h1>
+	<h2> At D-tour, our mission is to transform hiddens </h2>
+	<h2> gem in Davao Region into must-visit destinations. </h2>
+	<h2> We are commited to sustainable tourism, supporting local </h2>
+	<h2> communities, and providing unique, authentic experiences for our visitiors. </h2>
+	<br><br><br><br>
+	<div class="info-section">
+        <div class="info-card">
+            <div class="icon">🌍</div>
+            <p>BLUU was founded to address the challenges faced by under-appreciated Tourist Spot in Davao Region. </p>
+        </div>
+        <div class="info-card">
+            <div class="icon">✔️</div>
+            <p>We offer digital marketing solutions and a Visitor Management System (VMS) to boost awareness, enhance tourist experiences, and promote sustainable 	    tourism.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon">🌱</div>
+            <p>Combining digital marketing, visitor management, and eco-tourism consulting to unlock destination potential.
+	    </p>
+        </div>
+    </div>
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
